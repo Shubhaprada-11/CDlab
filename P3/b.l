@@ -1,0 +1,10 @@
+%{
+      #include "y.tab.h"
+%}
+%%
+"for" {return FOR;}
+[_a-zA-A][_a-zA-Z0-9]* {return IDEN;}
+[0-9][0-9]* {return NUM;}
+. {return yytext[0];}
+\n {return 0;}
+%%
